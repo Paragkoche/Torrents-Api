@@ -61,24 +61,7 @@ app.use('/api/:website/:query/:page?', (req, res, next) => {
 
             })
     }
-    if (website === 'eztv') {
-        scrapEzTVio.ezTV(query)
-            .then((data) => {
-                if (data === null) {
-                    return res.json({
-                        error: 'Website is blocked change IP'
-                    })
 
-                } else if (data.length === 0) {
-                    return res.json({
-                        error: 'No search result available for query (' + query + ')'
-                    })
-                } else {
-                    return res.send(data);
-                }
-
-            })
-    }
     if (website === 'torlock') {
         scrapTorLock.torLock(query, page)
             .then((data) => {
@@ -217,7 +200,7 @@ app.use('/api/:website/:query/:page?', (req, res, next) => {
 });
 
 app.use('/', (req, res) => {
-    res.send('<h1>Welcome to 1337x, NyaaSi, YTS, PirateBay, Torlock, EzTvio , TorrentGalaxy , Rarbg and Ettv Central Unoffical API</h1>');
+    res.send('<h1>Welcome to 1337x, NyaaSi, YTS, PirateBay, Torlock , TorrentGalaxy , Rarbg and Ettv Central Unoffical API</h1>');
 });
 const PORT = process.env.PORT || 3001;
 console.log('Listening on PORT : ', PORT);
