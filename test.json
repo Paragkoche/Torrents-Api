@@ -1,0 +1,56 @@
+{
+    "Anime": {
+        "All": 28
+    },
+    "Apps": {
+        "Mobile": 20,
+        "Other": 21,
+        "windows": 18
+    },
+    "Books": {
+        "Audiobooks": 13,
+        "Comics": 19,
+        "Ebooks": 12,
+        "Educational": 14,
+        "Magazine": 15
+    },
+    "Docus": {
+        "All": 9
+    },
+    "Games": {
+        "Windows": 10,
+        "Other": 43
+    },
+    "Movies": {
+        "4K_UHD": 3,
+        "Bollywood": 46,
+        "CAM_TS": 45,
+        "HD": 42,
+        "Packs": 4,
+        "SD": 1
+    },
+    "Music": {
+        "Albums": 22,
+        "Discography": 26,
+        "Lossless": 23,
+        "singles": 24
+    },
+    "Other": {
+        "Audio": 17,
+        "Other": 40,
+        "Pictures": 37,
+        "Training": 33
+    },
+    "TV": {
+        "EpHD": 41,
+        "EpSD": 5,
+        "Ep4k": 11,
+        "Packs": 6,
+        "sports": 7
+    },
+    "xxx": {
+        "HD": 35,
+        "Misc": 47,
+        "SD": 34
+    }
+}

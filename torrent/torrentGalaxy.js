@@ -1,7 +1,7 @@
 const cheerio = require('cheerio');
 const axios = require('axios');
-
-async function torrentGalaxy(query = '', cat = '', page = '0') {
+// axios.default.get('',{params})
+async function torrentGalaxy(query = '', cat, page = '0') {
 
     if (page !== '0') {
         try {
@@ -11,10 +11,10 @@ async function torrentGalaxy(query = '', cat = '', page = '0') {
         }
     }
     const allTorrents = [];
-    const url = "https://torrentgalaxy.to/torrents.php?search=" + query + "&cat=" + cat + "&sort=id&order=desc&page=" + page;
+    const url = "https://torrentgalaxy.to/torrents.php?search=" + query + "&sort=id&order=desc&page=" + page;
     let html;
     try {
-        html = await axios.get(url);
+        html = await axios.get(url, { params: { ...cat } });
     } catch {
         return null;
     }
