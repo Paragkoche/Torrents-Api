@@ -12,7 +12,7 @@ const ettvCentral = require('./torrent/ettv');
 
 const app = express();
 
-app.use('/api/:website/:query/:page?', (req, res, next) => {
+app.use('/api/:website/:query/:cat/:page?', (req, res, next) => {
     res.header("Access-Control-Allow-Origin", "*");
     res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
     let website = (req.params.website).toLowerCase();
@@ -99,7 +99,7 @@ app.use('/api/:website/:query/:page?', (req, res, next) => {
             })
     }
     if (website === 'tgx') {
-        torrentGalaxy(query, page)
+        torrentGalaxy(query, cat, page)
             .then((data) => {
                 if (data === null) {
                     return res.json({
